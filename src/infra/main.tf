@@ -1,8 +1,8 @@
-module "resourcegroup" {
-  for_each = local.configure_resource_groups.settings
-  source   = "../modules/resource-group"
-  settings = each.value
-}
+# module "resourcegroup" {
+#   for_each = local.configure_resource_groups.settings
+#   source   = "../modules/resource-group"
+#   settings = each.value
+# }
 module "aks" {
   for_each = local.configure_aks_resources.settings
   source   = "../modules/aks"
