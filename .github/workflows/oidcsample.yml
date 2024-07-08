@@ -9,7 +9,7 @@ permissions:
   contents: read
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted,Linux,X64,openid]
     steps:
       - name: Azure login
         uses: azure/login@v2
