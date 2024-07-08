@@ -16,7 +16,7 @@ jobs:
   create-resource-group-for-dev-environment:
     runs-on: [self-hosted,Linux,X64,openid]
     environment: mediawikidemo
-    if: github.ref == 'refs/heads/main'
+    
 
     defaults:
       run:
