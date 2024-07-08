@@ -5,7 +5,7 @@
 **We are deploying following resources as part of IaC deployment**
 -  Azure Kubernetes
 -  Azure Container Registry
--  MSSQL server with database
+-  MSSQL server with database.
 
 
 
