@@ -17,10 +17,10 @@ permissions:
 
 #These environment variables are used by the terraform azure provider to setup OIDD authenticate. 
 env:
-  ARM_CLIENT_ID: "01e11126-0da5-4d54-88a0-684928629bad"
-  ARM_TENANT_ID: "8eeb9e98-686a-45ae-8d97-c024b148d437"
+  ARM_CLIENT_ID: "${{ secrets.ARM_CLIENT_ID }}"
+  ARM_TENANT_ID: "${{ secrets.ARM_TENANT_ID }}"
   # ARM_CLIENT_SECRET: "${{ secrets.ARM_CLIENT_SECRET }}"
-  ARM_SUBSCRIPTION_ID: "cfa56b4d-9ab3-4006-a8dd-693d6517161f"
+  ARM_SUBSCRIPTION_ID: "${{ secrets.AZURE_SUBSCRIPTION_ID }}"
   TF_VAR_TFSTATE_RESOURCE_GROUP_NAME: "${{ secrets.TFSTATE_RESOURCE_GROUP_NAME }}"
   TF_VAR_TFSTATE_STORAGE_ACCOUNT_NAME: "${{ secrets.TFSTATE_STORAGE_ACCOUNT_NAME }}"
   TF_VAR_TFSTATE_STORAGE_ACCOUNT_KEY: "${{ secrets.TFSTATE_STORAGE_ACCOUNT_KEY }}"
@@ -45,9 +45,9 @@ jobs:
     - name: Az CLI Login
       uses: azure/login@v1
       with:
-        client-id: "01e11126-0da5-4d54-88a0-684928629bad"
-        tenant-id: "8eeb9e98-686a-45ae-8d97-c024b148d437"
-        subscription-id: "cfa56b4d-9ab3-4006-a8dd-693d6517161f"
+        client-id: "${{ secrets.ARM_CLIENT_ID }}"
+        tenant-id: "${{ secrets.ARM_TENANT_ID }}"
+        subscription-id: "${{ secrets.AZURE_SUBSCRIPTION_ID }}"
         # creds: '{"clientId":"${{ env.ARM_CLIENT_ID }}","clientSecret":"${{ secrets.ARM_CLIENT_SECRET }}","subscriptionId":"${{ env.ARM_SUBSCRIPTION_ID }}","tenantId":"${{ secrets.ARM_TENANT_ID }}"}'
     
    
