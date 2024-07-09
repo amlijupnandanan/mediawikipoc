@@ -147,7 +147,10 @@ jobs:
     - name: Az CLI Login
       uses: azure/login@v1
       with:
-        creds: '{"clientId":"${{ secrets.ARM_CLIENT_ID }}","clientSecret":"${{ secrets.ARM_CLIENT_SECRET }}","subscriptionId":"${{env.ARM_SUBSCRIPTION_ID}}","tenantId":"${{ secrets.ARM_TENANT_ID }}"}'
+        client-id: "${{ secrets.ARM_CLIENT_ID }}"
+        tenant-id: "${{ secrets.ARM_TENANT_ID }}"
+        subscription-id: "${{ secrets.AZURE_SUBSCRIPTION_ID }}"
+        # creds: '{"clientId":"${{ secrets.ARM_CLIENT_ID }}","clientSecret":"${{ secrets.ARM_CLIENT_SECRET }}","subscriptionId":"${{env.ARM_SUBSCRIPTION_ID}}","tenantId":"${{ secrets.ARM_TENANT_ID }}"}'
        
 
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
