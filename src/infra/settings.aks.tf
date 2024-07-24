@@ -2,9 +2,9 @@ locals {
   configure_aks_resources = {
     settings = {
       aksmediawiki0001 = {
-        name                                             = "aksmediawiki0001"
+        name                                             = "aksdex0001"
         location                                         = "centralindia"
-        resource_group_name                              = "RGMEDIAWIKI001"
+        resource_group_name                              = "RGDEXDEMO01"
         kubernetes_version                               = "1.27.9"
         sku_tier                                         = "Standard"
         private_cluster_enabled                          = false
