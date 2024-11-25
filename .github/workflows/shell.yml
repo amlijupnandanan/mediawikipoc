@@ -1,4 +1,4 @@
-name: Run Terraform Infra_DepoOrdering
+name: Run Terraform with script
 
 on:
   workflow_dispatch:
