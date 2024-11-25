@@ -24,7 +24,7 @@ jobs:
           aws s3 ls
 
   terraform_plan:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     needs: check_s3_buckets
     strategy:
       matrix:
